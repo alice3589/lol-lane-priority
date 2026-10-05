@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+# 集計DBは大きくなるのでコミットしない
+data/matchups.sqlite
+data/*.sqlite-journal
+build/
+dist/
+*.spec
+*.zip

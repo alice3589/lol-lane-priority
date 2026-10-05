@@ -1,0 +1,1519 @@
+{
+ "version": "16.19.1",
+ "champions": {
+  "Aatrox": {
+   "key": 266,
+   "name": "エイトロックス",
+   "tags": [
+    "Fighter"
+   ],
+   "attackrange": 175
+  },
+  "Ahri": {
+   "key": 103,
+   "name": "アーリ",
+   "tags": [
+    "Mage",
+    "Assassin"
+   ],
+   "attackrange": 550
+  },
+  "Akali": {
+   "key": 84,
+   "name": "アカリ",
+   "tags": [
+    "Assassin"
+   ],
+   "attackrange": 125
+  },
+  "Akshan": {
+   "key": 166,
+   "name": "アクシャン",
+   "tags": [
+    "Marksman",
+    "Assassin"
+   ],
+   "attackrange": 500
+  },
+  "Alistar": {
+   "key": 12,
+   "name": "アリスター",
+   "tags": [
+    "Tank",
+    "Support"
+   ],
+   "attackrange": 125
+  },
+  "Ambessa": {
+   "key": 799,
+   "name": "アンベッサ",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 125
+  },
+  "Amumu": {
+   "key": 32,
+   "name": "アムム",
+   "tags": [
+    "Tank",
+    "Support"
+   ],
+   "attackrange": 125
+  },
+  "Anivia": {
+   "key": 34,
+   "name": "アニビア",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 600
+  },
+  "Annie": {
+   "key": 1,
+   "name": "アニー",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 625
+  },
+  "Aphelios": {
+   "key": 523,
+   "name": "アフェリオス",
+   "tags": [
+    "Marksman"
+   ],
+   "attackrange": 550
+  },
+  "Ashe": {
+   "key": 22,
+   "name": "アッシュ",
+   "tags": [
+    "Marksman",
+    "Support"
+   ],
+   "attackrange": 600
+  },
+  "AurelionSol": {
+   "key": 136,
+   "name": "オレリオン・ソル",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Aurora": {
+   "key": 893,
+   "name": "オーロラ",
+   "tags": [
+    "Mage",
+    "Assassin"
+   ],
+   "attackrange": 550
+  },
+  "Azir": {
+   "key": 268,
+   "name": "アジール",
+   "tags": [
+    "Mage",
+    "Marksman"
+   ],
+   "attackrange": 525
+  },
+  "Bard": {
+   "key": 432,
+   "name": "バード",
+   "tags": [
+    "Support",
+    "Mage"
+   ],
+   "attackrange": 500
+  },
+  "Belveth": {
+   "key": 200,
+   "name": "ベル＝ヴェス",
+   "tags": [
+    "Fighter"
+   ],
+   "attackrange": 150
+  },
+  "Blitzcrank": {
+   "key": 53,
+   "name": "ブリッツクランク",
+   "tags": [
+    "Tank",
+    "Support"
+   ],
+   "attackrange": 125
+  },
+  "Brand": {
+   "key": 63,
+   "name": "ブランド",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 550
+  },
+  "Braum": {
+   "key": 201,
+   "name": "ブラウム",
+   "tags": [
+    "Tank",
+    "Support"
+   ],
+   "attackrange": 125
+  },
+  "Briar": {
+   "key": 233,
+   "name": "ブライアー",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 125
+  },
+  "Caitlyn": {
+   "key": 51,
+   "name": "ケイトリン",
+   "tags": [
+    "Marksman"
+   ],
+   "attackrange": 650
+  },
+  "Camille": {
+   "key": 164,
+   "name": "カミール",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 125
+  },
+  "Cassiopeia": {
+   "key": 69,
+   "name": "カシオペア",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Chogath": {
+   "key": 31,
+   "name": "チョ＝ガス",
+   "tags": [
+    "Tank",
+    "Mage"
+   ],
+   "attackrange": 125
+  },
+  "Corki": {
+   "key": 42,
+   "name": "コーキ",
+   "tags": [
+    "Marksman",
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Darius": {
+   "key": 122,
+   "name": "ダリウス",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 175
+  },
+  "Diana": {
+   "key": 131,
+   "name": "ダイアナ",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 150
+  },
+  "Draven": {
+   "key": 119,
+   "name": "ドレイヴン",
+   "tags": [
+    "Marksman"
+   ],
+   "attackrange": 550
+  },
+  "DrMundo": {
+   "key": 36,
+   "name": "ドクター・ムンド",
+   "tags": [
+    "Tank",
+    "Fighter"
+   ],
+   "attackrange": 125
+  },
+  "Ekko": {
+   "key": 245,
+   "name": "エコー",
+   "tags": [
+    "Assassin",
+    "Mage"
+   ],
+   "attackrange": 125
+  },
+  "Elise": {
+   "key": 60,
+   "name": "エリス",
+   "tags": [
+    "Assassin",
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Evelynn": {
+   "key": 28,
+   "name": "イブリン",
+   "tags": [
+    "Assassin",
+    "Mage"
+   ],
+   "attackrange": 125
+  },
+  "Ezreal": {
+   "key": 81,
+   "name": "エズリアル",
+   "tags": [
+    "Marksman",
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Fiddlesticks": {
+   "key": 9,
+   "name": "フィドルスティックス",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 480
+  },
+  "Fiora": {
+   "key": 114,
+   "name": "フィオラ",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 150
+  },
+  "Fizz": {
+   "key": 105,
+   "name": "フィズ",
+   "tags": [
+    "Assassin",
+    "Fighter"
+   ],
+   "attackrange": 175
+  },
+  "Galio": {
+   "key": 3,
+   "name": "ガリオ",
+   "tags": [
+    "Tank",
+    "Mage"
+   ],
+   "attackrange": 150
+  },
+  "Gangplank": {
+   "key": 41,
+   "name": "ガングプランク",
+   "tags": [
+    "Fighter"
+   ],
+   "attackrange": 125
+  },
+  "Garen": {
+   "key": 86,
+   "name": "ガレン",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 175
+  },
+  "Gnar": {
+   "key": 150,
+   "name": "ナー",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 175
+  },
+  "Gragas": {
+   "key": 79,
+   "name": "グラガス",
+   "tags": [
+    "Fighter",
+    "Mage"
+   ],
+   "attackrange": 125
+  },
+  "Graves": {
+   "key": 104,
+   "name": "グレイブス",
+   "tags": [
+    "Marksman"
+   ],
+   "attackrange": 425
+  },
+  "Gwen": {
+   "key": 887,
+   "name": "グウェン",
+   "tags": [
+    "Fighter"
+   ],
+   "attackrange": 150
+  },
+  "Hecarim": {
+   "key": 120,
+   "name": "ヘカリム",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 175
+  },
+  "Heimerdinger": {
+   "key": 74,
+   "name": "ハイマーディンガー",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 550
+  },
+  "Hwei": {
+   "key": 910,
+   "name": "フェイ",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 550
+  },
+  "Illaoi": {
+   "key": 420,
+   "name": "イラオイ",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 125
+  },
+  "Irelia": {
+   "key": 39,
+   "name": "イレリア",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 200
+  },
+  "Ivern": {
+   "key": 427,
+   "name": "アイバーン",
+   "tags": [
+    "Support",
+    "Mage"
+   ],
+   "attackrange": 475
+  },
+  "Janna": {
+   "key": 40,
+   "name": "ジャンナ",
+   "tags": [
+    "Support",
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "JarvanIV": {
+   "key": 59,
+   "name": "ジャーヴァンⅣ",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 175
+  },
+  "Jax": {
+   "key": 24,
+   "name": "ジャックス",
+   "tags": [
+    "Fighter"
+   ],
+   "attackrange": 125
+  },
+  "Jayce": {
+   "key": 126,
+   "name": "ジェイス",
+   "tags": [
+    "Fighter",
+    "Marksman"
+   ],
+   "attackrange": 125
+  },
+  "Jhin": {
+   "key": 202,
+   "name": "ジン",
+   "tags": [
+    "Marksman",
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Jinx": {
+   "key": 222,
+   "name": "ジンクス",
+   "tags": [
+    "Marksman"
+   ],
+   "attackrange": 525
+  },
+  "Kaisa": {
+   "key": 145,
+   "name": "カイ＝サ",
+   "tags": [
+    "Marksman",
+    "Mage"
+   ],
+   "attackrange": 525
+  },
+  "Kalista": {
+   "key": 429,
+   "name": "カリスタ",
+   "tags": [
+    "Marksman"
+   ],
+   "attackrange": 525
+  },
+  "Karma": {
+   "key": 43,
+   "name": "カルマ",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 525
+  },
+  "Karthus": {
+   "key": 30,
+   "name": "カーサス",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 450
+  },
+  "Kassadin": {
+   "key": 38,
+   "name": "カサディン",
+   "tags": [
+    "Assassin",
+    "Mage"
+   ],
+   "attackrange": 150
+  },
+  "Katarina": {
+   "key": 55,
+   "name": "カタリナ",
+   "tags": [
+    "Assassin",
+    "Mage"
+   ],
+   "attackrange": 125
+  },
+  "Kayle": {
+   "key": 10,
+   "name": "ケイル",
+   "tags": [
+    "Marksman",
+    "Mage"
+   ],
+   "attackrange": 175
+  },
+  "Kayn": {
+   "key": 141,
+   "name": "ケイン",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 175
+  },
+  "Kennen": {
+   "key": 85,
+   "name": "ケネン",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Khazix": {
+   "key": 121,
+   "name": "カ＝ジックス",
+   "tags": [
+    "Assassin"
+   ],
+   "attackrange": 125
+  },
+  "Kindred": {
+   "key": 203,
+   "name": "キンドレッド",
+   "tags": [
+    "Marksman"
+   ],
+   "attackrange": 500
+  },
+  "Kled": {
+   "key": 240,
+   "name": "クレッド",
+   "tags": [
+    "Fighter"
+   ],
+   "attackrange": 125
+  },
+  "KogMaw": {
+   "key": 96,
+   "name": "コグ＝マウ",
+   "tags": [
+    "Marksman",
+    "Mage"
+   ],
+   "attackrange": 500
+  },
+  "KSante": {
+   "key": 897,
+   "name": "カ・サンテ",
+   "tags": [
+    "Tank",
+    "Fighter"
+   ],
+   "attackrange": 150
+  },
+  "Leblanc": {
+   "key": 7,
+   "name": "ルブラン",
+   "tags": [
+    "Assassin",
+    "Mage"
+   ],
+   "attackrange": 525
+  },
+  "LeeSin": {
+   "key": 64,
+   "name": "リー・シン",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 125
+  },
+  "Leona": {
+   "key": 89,
+   "name": "レオナ",
+   "tags": [
+    "Tank",
+    "Support"
+   ],
+   "attackrange": 125
+  },
+  "Lillia": {
+   "key": 876,
+   "name": "リリア",
+   "tags": [
+    "Fighter",
+    "Mage"
+   ],
+   "attackrange": 325
+  },
+  "Lissandra": {
+   "key": 127,
+   "name": "リサンドラ",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Locke": {
+   "key": 805,
+   "name": "ロック",
+   "tags": [
+    "Assassin",
+    "Mage"
+   ],
+   "attackrange": 125
+  },
+  "Lucian": {
+   "key": 236,
+   "name": "ルシアン",
+   "tags": [
+    "Marksman",
+    "Assassin"
+   ],
+   "attackrange": 500
+  },
+  "Lulu": {
+   "key": 117,
+   "name": "ルル",
+   "tags": [
+    "Support",
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Lux": {
+   "key": 99,
+   "name": "ラックス",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 550
+  },
+  "Malphite": {
+   "key": 54,
+   "name": "マルファイト",
+   "tags": [
+    "Tank",
+    "Mage"
+   ],
+   "attackrange": 125
+  },
+  "Malzahar": {
+   "key": 90,
+   "name": "マルザハール",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 500
+  },
+  "Maokai": {
+   "key": 57,
+   "name": "マオカイ",
+   "tags": [
+    "Tank",
+    "Support"
+   ],
+   "attackrange": 125
+  },
+  "MasterYi": {
+   "key": 11,
+   "name": "マスター・イー",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 175
+  },
+  "Mel": {
+   "key": 800,
+   "name": "メル",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 550
+  },
+  "Milio": {
+   "key": 902,
+   "name": "ミリオ",
+   "tags": [
+    "Support",
+    "Mage"
+   ],
+   "attackrange": 525
+  },
+  "MissFortune": {
+   "key": 21,
+   "name": "ミス・フォーチュン",
+   "tags": [
+    "Marksman",
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "MonkeyKing": {
+   "key": 62,
+   "name": "ウーコン",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 175
+  },
+  "Mordekaiser": {
+   "key": 82,
+   "name": "モルデカイザー",
+   "tags": [
+    "Fighter",
+    "Mage"
+   ],
+   "attackrange": 175
+  },
+  "Morgana": {
+   "key": 25,
+   "name": "モルガナ",
+   "tags": [
+    "Support",
+    "Mage"
+   ],
+   "attackrange": 450
+  },
+  "Naafiri": {
+   "key": 950,
+   "name": "ナフィーリ",
+   "tags": [
+    "Assassin",
+    "Fighter"
+   ],
+   "attackrange": 125
+  },
+  "Nami": {
+   "key": 267,
+   "name": "ナミ",
+   "tags": [
+    "Support",
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Nasus": {
+   "key": 75,
+   "name": "ナサス",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 125
+  },
+  "Nautilus": {
+   "key": 111,
+   "name": "ノーチラス",
+   "tags": [
+    "Tank",
+    "Support"
+   ],
+   "attackrange": 175
+  },
+  "Neeko": {
+   "key": 518,
+   "name": "ニーコ",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 550
+  },
+  "Nidalee": {
+   "key": 76,
+   "name": "ニダリー",
+   "tags": [
+    "Assassin",
+    "Mage"
+   ],
+   "attackrange": 525
+  },
+  "Nilah": {
+   "key": 895,
+   "name": "ニーラ",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 225
+  },
+  "Nocturne": {
+   "key": 56,
+   "name": "ノクターン",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 125
+  },
+  "Nunu": {
+   "key": 20,
+   "name": "ヌヌ＆ウィルンプ",
+   "tags": [
+    "Tank",
+    "Mage"
+   ],
+   "attackrange": 125
+  },
+  "Olaf": {
+   "key": 2,
+   "name": "オラフ",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 125
+  },
+  "Orianna": {
+   "key": 61,
+   "name": "オリアナ",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 525
+  },
+  "Ornn": {
+   "key": 516,
+   "name": "オーン",
+   "tags": [
+    "Tank"
+   ],
+   "attackrange": 175
+  },
+  "Pantheon": {
+   "key": 80,
+   "name": "パンテオン",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 175
+  },
+  "Poppy": {
+   "key": 78,
+   "name": "ポッピー",
+   "tags": [
+    "Tank",
+    "Fighter"
+   ],
+   "attackrange": 125
+  },
+  "Pyke": {
+   "key": 555,
+   "name": "パイク",
+   "tags": [
+    "Support",
+    "Assassin"
+   ],
+   "attackrange": 150
+  },
+  "Qiyana": {
+   "key": 246,
+   "name": "キヤナ",
+   "tags": [
+    "Assassin"
+   ],
+   "attackrange": 150
+  },
+  "Quinn": {
+   "key": 133,
+   "name": "クイン",
+   "tags": [
+    "Marksman",
+    "Assassin"
+   ],
+   "attackrange": 525
+  },
+  "Rakan": {
+   "key": 497,
+   "name": "ラカン",
+   "tags": [
+    "Support"
+   ],
+   "attackrange": 300
+  },
+  "Rammus": {
+   "key": 33,
+   "name": "ラムス",
+   "tags": [
+    "Tank"
+   ],
+   "attackrange": 125
+  },
+  "RekSai": {
+   "key": 421,
+   "name": "レク＝サイ",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 175
+  },
+  "Rell": {
+   "key": 526,
+   "name": "レル",
+   "tags": [
+    "Tank",
+    "Support"
+   ],
+   "attackrange": 175
+  },
+  "Renata": {
+   "key": 888,
+   "name": "レナータ・グラスク",
+   "tags": [
+    "Support",
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Renekton": {
+   "key": 58,
+   "name": "レネクトン",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 125
+  },
+  "Rengar": {
+   "key": 107,
+   "name": "レンガー",
+   "tags": [
+    "Assassin",
+    "Fighter"
+   ],
+   "attackrange": 125
+  },
+  "Riven": {
+   "key": 92,
+   "name": "リヴェン",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 125
+  },
+  "Rumble": {
+   "key": 68,
+   "name": "ランブル",
+   "tags": [
+    "Fighter",
+    "Mage"
+   ],
+   "attackrange": 125
+  },
+  "Ryze": {
+   "key": 13,
+   "name": "ライズ",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Samira": {
+   "key": 360,
+   "name": "サミーラ",
+   "tags": [
+    "Marksman",
+    "Assassin"
+   ],
+   "attackrange": 500
+  },
+  "Sejuani": {
+   "key": 113,
+   "name": "セジュアニ",
+   "tags": [
+    "Tank"
+   ],
+   "attackrange": 150
+  },
+  "Senna": {
+   "key": 235,
+   "name": "セナ",
+   "tags": [
+    "Support",
+    "Marksman"
+   ],
+   "attackrange": 600
+  },
+  "Seraphine": {
+   "key": 147,
+   "name": "セラフィーン",
+   "tags": [
+    "Support",
+    "Mage"
+   ],
+   "attackrange": 525
+  },
+  "Sett": {
+   "key": 875,
+   "name": "セト",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 125
+  },
+  "Shaco": {
+   "key": 35,
+   "name": "シャコ",
+   "tags": [
+    "Assassin"
+   ],
+   "attackrange": 125
+  },
+  "Shen": {
+   "key": 98,
+   "name": "シェン",
+   "tags": [
+    "Tank"
+   ],
+   "attackrange": 125
+  },
+  "Shyvana": {
+   "key": 102,
+   "name": "シヴァーナ",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 150
+  },
+  "Singed": {
+   "key": 27,
+   "name": "シンジド",
+   "tags": [
+    "Tank",
+    "Mage"
+   ],
+   "attackrange": 125
+  },
+  "Sion": {
+   "key": 14,
+   "name": "サイオン",
+   "tags": [
+    "Tank",
+    "Fighter"
+   ],
+   "attackrange": 175
+  },
+  "Sivir": {
+   "key": 15,
+   "name": "シヴィア",
+   "tags": [
+    "Marksman"
+   ],
+   "attackrange": 500
+  },
+  "Skarner": {
+   "key": 72,
+   "name": "スカーナー",
+   "tags": [
+    "Tank",
+    "Fighter"
+   ],
+   "attackrange": 150
+  },
+  "Smolder": {
+   "key": 901,
+   "name": "スモルダー",
+   "tags": [
+    "Marksman",
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Sona": {
+   "key": 37,
+   "name": "ソナ",
+   "tags": [
+    "Support",
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Soraka": {
+   "key": 16,
+   "name": "ソラカ",
+   "tags": [
+    "Support",
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Swain": {
+   "key": 50,
+   "name": "スウェイン",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 525
+  },
+  "Sylas": {
+   "key": 517,
+   "name": "サイラス",
+   "tags": [
+    "Mage",
+    "Assassin"
+   ],
+   "attackrange": 175
+  },
+  "Syndra": {
+   "key": 134,
+   "name": "シンドラ",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "TahmKench": {
+   "key": 223,
+   "name": "タム・ケンチ",
+   "tags": [
+    "Tank",
+    "Support"
+   ],
+   "attackrange": 175
+  },
+  "Taliyah": {
+   "key": 163,
+   "name": "タリヤ",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 525
+  },
+  "Talon": {
+   "key": 91,
+   "name": "タロン",
+   "tags": [
+    "Assassin"
+   ],
+   "attackrange": 125
+  },
+  "Taric": {
+   "key": 44,
+   "name": "タリック",
+   "tags": [
+    "Support",
+    "Tank"
+   ],
+   "attackrange": 150
+  },
+  "Teemo": {
+   "key": 17,
+   "name": "ティーモ",
+   "tags": [
+    "Marksman",
+    "Mage"
+   ],
+   "attackrange": 500
+  },
+  "Thresh": {
+   "key": 412,
+   "name": "スレッシュ",
+   "tags": [
+    "Support",
+    "Tank"
+   ],
+   "attackrange": 450
+  },
+  "Tristana": {
+   "key": 18,
+   "name": "トリスターナ",
+   "tags": [
+    "Marksman",
+    "Assassin"
+   ],
+   "attackrange": 550
+  },
+  "Trundle": {
+   "key": 48,
+   "name": "トランドル",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 175
+  },
+  "Tryndamere": {
+   "key": 23,
+   "name": "トリンダメア",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 175
+  },
+  "TwistedFate": {
+   "key": 4,
+   "name": "ツイステッド・フェイト",
+   "tags": [
+    "Mage",
+    "Marksman"
+   ],
+   "attackrange": 525
+  },
+  "Twitch": {
+   "key": 29,
+   "name": "トゥイッチ",
+   "tags": [
+    "Marksman",
+    "Assassin"
+   ],
+   "attackrange": 550
+  },
+  "Udyr": {
+   "key": 77,
+   "name": "ウディア",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 125
+  },
+  "Urgot": {
+   "key": 6,
+   "name": "アーゴット",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 350
+  },
+  "Varus": {
+   "key": 110,
+   "name": "ヴァルス",
+   "tags": [
+    "Marksman",
+    "Mage"
+   ],
+   "attackrange": 575
+  },
+  "Vayne": {
+   "key": 67,
+   "name": "ヴェイン",
+   "tags": [
+    "Marksman",
+    "Assassin"
+   ],
+   "attackrange": 550
+  },
+  "Veigar": {
+   "key": 45,
+   "name": "ベイガー",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Velkoz": {
+   "key": 161,
+   "name": "ヴェル＝コズ",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 525
+  },
+  "Vex": {
+   "key": 711,
+   "name": "ヴェックス",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Vi": {
+   "key": 254,
+   "name": "ヴァイ",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 125
+  },
+  "Viego": {
+   "key": 234,
+   "name": "ヴィエゴ",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 200
+  },
+  "Viktor": {
+   "key": 112,
+   "name": "ビクター",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 525
+  },
+  "Vladimir": {
+   "key": 8,
+   "name": "ブラッドミア",
+   "tags": [
+    "Mage",
+    "Fighter"
+   ],
+   "attackrange": 450
+  },
+  "Volibear": {
+   "key": 106,
+   "name": "ボリベア",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 150
+  },
+  "Warwick": {
+   "key": 19,
+   "name": "ワーウィック",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 125
+  },
+  "Xayah": {
+   "key": 498,
+   "name": "ザヤ",
+   "tags": [
+    "Marksman"
+   ],
+   "attackrange": 525
+  },
+  "Xerath": {
+   "key": 101,
+   "name": "ゼラス",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 525
+  },
+  "XinZhao": {
+   "key": 5,
+   "name": "シン・ジャオ",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 175
+  },
+  "Yasuo": {
+   "key": 157,
+   "name": "ヤスオ",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 175
+  },
+  "Yone": {
+   "key": 777,
+   "name": "ヨネ",
+   "tags": [
+    "Fighter",
+    "Assassin"
+   ],
+   "attackrange": 175
+  },
+  "Yorick": {
+   "key": 83,
+   "name": "ヨリック",
+   "tags": [
+    "Fighter",
+    "Tank"
+   ],
+   "attackrange": 175
+  },
+  "Yunara": {
+   "key": 804,
+   "name": "ユナラ",
+   "tags": [
+    "Marksman"
+   ],
+   "attackrange": 575
+  },
+  "Yuumi": {
+   "key": 350,
+   "name": "ユーミ",
+   "tags": [
+    "Support",
+    "Mage"
+   ],
+   "attackrange": 425
+  },
+  "Zaahen": {
+   "key": 904,
+   "name": "ザーヘン",
+   "tags": [
+    "Fighter"
+   ],
+   "attackrange": 175
+  },
+  "Zac": {
+   "key": 154,
+   "name": "ザック",
+   "tags": [
+    "Tank",
+    "Fighter"
+   ],
+   "attackrange": 175
+  },
+  "Zed": {
+   "key": 238,
+   "name": "ゼド",
+   "tags": [
+    "Assassin"
+   ],
+   "attackrange": 125
+  },
+  "Zeri": {
+   "key": 221,
+   "name": "ゼリ",
+   "tags": [
+    "Marksman"
+   ],
+   "attackrange": 550
+  },
+  "Ziggs": {
+   "key": 115,
+   "name": "ジグス",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Zilean": {
+   "key": 26,
+   "name": "ジリアン",
+   "tags": [
+    "Support",
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Zoe": {
+   "key": 142,
+   "name": "ゾーイ",
+   "tags": [
+    "Mage"
+   ],
+   "attackrange": 550
+  },
+  "Zyra": {
+   "key": 143,
+   "name": "ザイラ",
+   "tags": [
+    "Mage",
+    "Support"
+   ],
+   "attackrange": 575
+  }
+ }
+}
