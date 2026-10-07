@@ -6,7 +6,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use eframe::egui::{self, Align2, Color32, CornerRadius, FontId, Pos2, Rect, Sense, Shadow, Stroke, StrokeKind, Vec2};
-use lane_core::analyzer::{Analysis, Analyzer, Overrides, UNCERTAIN_BELOW};
+use lane_core::analyzer::{Analysis, Analyzer, CounterPick, Overrides, UNCERTAIN_BELOW};
 use lane_core::champions::{cache_path, refresh_cache, ChampionCatalog};
 use lane_core::config::{Settings, BUNDLED_CHAMPIONS, BUNDLED_ROLES, BUNDLED_TRAITS};
 use lane_core::matchup_db::MatchupDB;
@@ -14,6 +14,7 @@ use lane_core::models::{lane_label, position_label, tier_label, GameState, Place
 use lane_core::scorer::LaneResult;
 use lane_core::sources::{ClientSource, MockSource, Source};
 use lane_core::traits::TraitTable;
+use std::cell::RefCell;
 use std::collections::HashMap;
 use std::sync::mpsc::{self, Receiver, Sender};
 use std::time::Duration;
@@ -288,6 +289,8 @@ struct App {
     rx: Receiver<Msg>,
     cmd_tx: Sender<Cmd>,
     settings_draft: Option<Settings>,
+    /// (ポジション, 敵チャンピオン) → カウンター候補。設定やチャンピオン一覧が変わったら捨てる
+    counters: RefCell<HashMap<(&'static str, String), Vec<CounterPick>>>,
 }
 
 impl App {
@@ -336,6 +339,7 @@ impl App {
             rx,
             cmd_tx,
             settings_draft: None,
+            counters: RefCell::new(HashMap::new()),
         };
         app.refresh();
         app
@@ -568,17 +572,54 @@ impl App {
         response
     }
 
+    /// 敵のチャンピオンごとに「それに有利なチャンピオン」の上位を並べる
+    fn counter_section(&self, ui: &mut egui::Ui, result: &LaneResult) {
+        let positions = lane_positions(&result.lane);
+        let picked: Vec<&str> = self
+            .analysis
+            .ally
+            .iter()
+            .chain(&self.analysis.enemy)
+            .filter_map(|p| p.player.champion.as_deref())
+            .collect();
+        for pos in positions {
+            let Some(enemy) = self.analysis.placement_at("enemy", pos).and_then(|p| p.player.champion.clone()) else { continue };
+            let mut cache = self.counters.borrow_mut();
+            let list = cache
+                .entry((pos, enemy.clone()))
+                .or_insert_with(|| self.analyzer.counter_picks(pos, &enemy, 30));
+            let shown: Vec<&CounterPick> = list.iter().filter(|c| !picked.contains(&c.champion.as_str())).take(6).collect();
+            ui.horizontal(|ui| {
+                ui.label(egui::RichText::new("カウンター候補").color(ACCENT));
+                let who = format!("{}（{}）", self.analyzer.catalog.name(&enemy), position_label(pos));
+                ui.label(egui::RichText::new(format!("{who} に有利（点数が高いほど有利）")).color(TEXT_SUB));
+            });
+            ui.horizontal_wrapped(|ui| {
+                for c in shown {
+                    let text = format!("{} {:+.0}", self.analyzer.catalog.name(&c.champion), c.score);
+                    let r = ui.label(egui::RichText::new(text).color(TAG_TEXT).background_color(white(0.92)));
+                    if !c.reason.is_empty() {
+                        r.on_hover_text(format!("主な理由: {}", c.reason));
+                    }
+                }
+            });
+            ui.add_space(4.0);
+        }
+    }
+
     fn detail(&self, ui: &mut egui::Ui, result: &LaneResult) {
         egui::Frame::new()
             .fill(Color32::from_rgba_unmultiplied(0x1f, 0x6d, 0x94, 110))
             .inner_margin(egui::Margin::symmetric(12, 8))
             .show(ui, |ui| {
                 ui.set_width(ui.available_width());
+                self.counter_section(ui, result);
                 let Some(score) = result.score else {
                     let notes = if result.notes.is_empty() { "チャンピオンが揃うと判定します".to_string() } else { result.notes.join("\n") };
                     ui.label(egui::RichText::new(notes).color(TEXT_SUB));
                     return;
                 };
+                ui.add_space(6.0);
                 ui.horizontal(|ui| {
                     ui.label(egui::RichText::new("判定の内訳").color(ACCENT));
                     ui.label(
@@ -710,6 +751,7 @@ impl App {
                 }
                 let _ = self.cmd_tx.send(Cmd::SetLockfile(new.lockfile_path.clone()));
                 self.settings = new;
+                self.counters.borrow_mut().clear();
                 self.save();
                 self.refresh();
             }
@@ -735,6 +777,7 @@ impl eframe::App for App {
                 Msg::Catalog(c) => {
                     let _ = self.cmd_tx.send(Cmd::SetCatalog(c.clone()));
                     self.analyzer.catalog = c;
+                    self.counters.borrow_mut().clear();
                     self.refresh();
                 }
             }
@@ -781,7 +824,7 @@ impl eframe::App for App {
                     ui.add_space(14.0);
                     ui.label(
                         egui::RichText::new(
-                            "レーン名・バーをクリックで根拠を表示 ／ 札をドラッグ（右クリック）でレーンを入れ替え ／ 「?」は推定の確信度が低いもの",
+                            "レーン名・バーをクリックで根拠とカウンター候補を表示 ／ 札をドラッグ（右クリック）でレーンを入れ替え ／ 「?」は推定の確信度が低いもの",
                         )
                         .color(TEXT_SUB)
                         .size(13.0),

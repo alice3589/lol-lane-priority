@@ -21,6 +21,18 @@ fn lane_positions(lane: &str) -> &'static [&'static str] {
 
 pub use crate::config::Settings;
 
+/// カウンター候補に挙げるロール出現率の下限
+const COUNTER_MIN_ROLE_RATE: f64 = 0.10;
+
+/// 「この相手に有利なチャンピオン」の1件
+#[derive(Debug, Clone)]
+pub struct CounterPick {
+    pub champion: String,
+    pub score: f64,
+    /// 有利になっている主な理由（スコアへの寄与が最大の項目）
+    pub reason: String,
+}
+
 #[derive(Debug, Default)]
 pub struct Analysis {
     pub ally: Vec<Placement>,
@@ -74,6 +86,36 @@ impl Analyzer {
             min_games: self.settings.min_games,
             patches: self.patches(),
         }
+    }
+
+    /// position（5ポジション）で敵の enemy に対して有利なチャンピオンを、スコアの高い順に limit 件返す。
+    /// 特性表（と実績DB）による判定で、そのポジションで一定以上使われるチャンピオンだけを候補にする。
+    pub fn counter_picks(&self, position: &str, enemy: &str, limit: usize) -> Vec<CounterPick> {
+        let (lane, slot) = match position {
+            "utility" => ("bottom", 1),
+            "bottom" => ("bottom", 0),
+            other => (other, 0),
+        };
+        let scorer = self.scorer();
+        let width = if lane == "bottom" { 2 } else { 1 };
+        let mut enemy_side: Vec<Option<&str>> = vec![None; width];
+        enemy_side[slot] = Some(enemy);
+        let mut picks: Vec<CounterPick> = self
+            .catalog
+            .ids()
+            .into_iter()
+            .filter(|cid| *cid != enemy && self.rates_for(cid).get(position).copied().unwrap_or(0.0) >= COUNTER_MIN_ROLE_RATE)
+            .filter_map(|cid| {
+                let mut ally_side: Vec<Option<&str>> = vec![None; width];
+                ally_side[slot] = Some(cid);
+                let result = scorer.score_lane(lane, &ally_side, &enemy_side);
+                let reason = result.reasons.iter().find(|r| r.points > 0.0).map(|r| r.label.clone()).unwrap_or_default();
+                Some(CounterPick { champion: cid.to_string(), score: result.score?, reason })
+            })
+            .collect();
+        picks.sort_by(|a, b| b.score.partial_cmp(&a.score).unwrap().then_with(|| a.champion.cmp(&b.champion)));
+        picks.truncate(limit);
+        picks
     }
 
     pub fn analyze(&self, state: &GameState, overrides: Option<&Overrides>) -> Analysis {

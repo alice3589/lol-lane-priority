@@ -285,3 +285,18 @@ fn rate_limiter_waits() {
     rl.wait(); // 10秒3回の制限で待つ
     approx(now.get(), 10.01);
 }
+
+#[test]
+fn counter_picks_are_role_filtered_and_sorted() {
+    use lane_core::analyzer::{Analyzer, Settings};
+    let analyzer = Analyzer::new(catalog(), traits(), Settings::default(), None);
+    for (pos, enemy) in [("top", "Darius"), ("middle", "Zed"), ("bottom", "Jinx"), ("utility", "Lulu")] {
+        let picks = analyzer.counter_picks(pos, enemy, 10);
+        assert!(!picks.is_empty(), "{pos}");
+        assert!(picks.len() <= 10);
+        assert!(picks.windows(2).all(|w| w[0].score >= w[1].score), "{pos} is sorted");
+        assert!(picks.iter().all(|c| c.champion != enemy));
+        let rates = |c: &str| analyzer.rates_for(c).get(pos).copied().unwrap_or(0.0);
+        assert!(picks.iter().all(|c| rates(&c.champion) >= 0.10), "{pos} role filter");
+    }
+}
