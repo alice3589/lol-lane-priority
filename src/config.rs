@@ -1,11 +1,11 @@
-//! 設定の読み書きと同梱データ。設定ファイルは Python 版と同じ %APPDATA%\lol-lane-priority\settings.json。
+//! 設定の読み書きと同梱データ。設定ファイルは旧 Python 版と同じ場所・形式の %APPDATA%\lol-lane-priority\settings.json。
 use serde::{Deserialize, Serialize};
 use std::path::{Path, PathBuf};
 
 /// 同梱データ（exe に埋め込む）
-pub const BUNDLED_CHAMPIONS: &str = include_str!("../../data/champions_ja.json");
-pub const BUNDLED_TRAITS: &str = include_str!("../../data/champion_traits.json");
-pub const BUNDLED_ROLES: &str = include_str!("../../data/role_rates.json");
+pub const BUNDLED_CHAMPIONS: &str = include_str!("../data/champions_ja.json");
+pub const BUNDLED_TRAITS: &str = include_str!("../data/champion_traits.json");
+pub const BUNDLED_ROLES: &str = include_str!("../data/role_rates.json");
 
 pub fn user_dir() -> PathBuf {
     let base = std::env::var_os("APPDATA")

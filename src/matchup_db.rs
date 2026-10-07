@@ -1,4 +1,4 @@
-//! マッチアップ実績DB（SQLite）。Python 版と同じスキーマなので同じ .sqlite を読み書きできる。
+//! マッチアップ実績DB（SQLite）。旧 Python 版と同じスキーマなので、そちらで集計した .sqlite もそのまま読める。
 use crate::models::{POSITIONS, TIERS};
 use rusqlite::{params, params_from_iter, Connection};
 use std::cell::RefCell;

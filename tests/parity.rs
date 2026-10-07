@@ -1,4 +1,4 @@
-//! Python 版（tests/gen_golden.py が出力した golden.json）と同じ結果になるかの確認。
+//! 旧 Python 版の計算結果（golden.json。Python 版を削除する前に書き出したもの）と同じ結果になるかの確認。
 use lane_core::analyzer::{Analyzer, Settings};
 use lane_core::champions::ChampionCatalog;
 use lane_core::matchup_db::{LaneRow, MatchupDB};
@@ -9,14 +9,14 @@ use serde_json::Value;
 use std::path::PathBuf;
 
 fn root() -> PathBuf {
-    PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("..")
+    PathBuf::from(env!("CARGO_MANIFEST_DIR"))
 }
 
 fn load() -> (ChampionCatalog, TraitTable, Value) {
     let data = root().join("data");
     let catalog = ChampionCatalog::load(&data.join("champions_ja.json"), None).unwrap();
     let traits = TraitTable::load(&data).unwrap();
-    let golden = serde_json::from_str(&std::fs::read_to_string(root().join("rust/tests/golden.json")).unwrap()).unwrap();
+    let golden = serde_json::from_str(&std::fs::read_to_string(root().join("tests/golden.json")).unwrap()).unwrap();
     (catalog, traits, golden)
 }
 

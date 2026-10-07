@@ -3,7 +3,7 @@ name = "lane-core"
 version = "0.1.0"
 edition = "2021"
 rust-version = "1.90"
-description = "lol-lane-priority のロジック層（Python版 app/ の移植）"
+description = "LoL レーン主導権判定アプリ"
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }

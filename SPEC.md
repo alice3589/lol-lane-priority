@@ -116,28 +116,29 @@ APIのレート制限（開発キー: 20req/秒・100req/2分）を考慮し、�
 | 規約順守 | Riot の開発者ポリシーに従う。ゲームのメモリ読み取り・入力自動化は一切しない。**敵の非公開情報は扱わない**（チャンセレで見える情報のみ） |
 | 公開する場合 | Production APIキーの申請と、アプリ登録が必要 |
 
-## 7. 技術構成（案）
+## 7. 技術構成
 
 | 層 | 技術 |
 |---|---|
-| 言語 | Python 3.11 以上 |
-| LCU接続 | `lcu-driver` または自前（lockfile + WebSocket） |
-| UI | PySide6（デスクトップアプリ・別ウィンドウ） |
-| DB | SQLite |
-| 集計バッチ | Python スクリプト（`requests` + レート制限キュー） |
+| 言語 | Rust（2026-10-07 に Python 版から移植。Python 版は削除済み） |
+| LCU接続 | 自前（lockfile / プロセスのコマンドライン + HTTPS ポーリング、`ureq`） |
+| UI | egui（eframe）。デスクトップアプリ・別ウィンドウ |
+| DB | SQLite（`rusqlite`） |
+| 集計バッチ | `collect-matches.exe`（`ureq` + レート制限キュー） |
 
-### ディレクトリ構成（案）
+### ディレクトリ構成
 
 ```
 lol-lane-priority/
 ├─ SPEC.md
-├─ app/
-│  ├─ lcu_client.py      # LCU接続・チャンセレ監視
-│  ├─ role_inference.py  # 敵レーン推定
-│  ├─ scorer.py          # 主導権スコア計算
-│  └─ ui/                # 画面
-├─ batch/
-│  └─ collect_matches.py # Match-V5 収集・集計
+├─ Cargo.toml
+├─ src/
+│  ├─ main.rs            # 画面（lane-priority.exe）
+│  ├─ sources.rs         # LCU接続・チャンセレ監視・試合中データ
+│  ├─ role_inference.rs  # 敵レーン推定
+│  ├─ scorer.rs          # 主導権スコア計算
+│  ├─ collect.rs         # Match-V5 収集・集計
+│  └─ bin/collect-matches.rs
 ├─ data/
 │  ├─ champion_traits.json
 │  ├─ role_rates.json
@@ -159,5 +160,5 @@ lol-lane-priority/
 |---|---|
 | 対象ランク帯 | **利用者が設定画面で自由に選択**（例: 全体 / シルバー / ゴールド / … / マスター以上）。集計DBはランク帯ごとに保持し、選んだランク帯のデータで判定する。サンプル不足のランク帯は隣接ランク帯と合算して補う |
 | 主導権の正解ラベル | **10分時点のゴールド差（GD@10）**。実績データ（A）の主指標、および答え合わせ（F-12）の基準とする |
-| UI | **デスクトップアプリ**（PySide6、別ウィンドウ） |
+| UI | **デスクトップアプリ**（別ウィンドウ。当初 PySide6 → 2026-10-07 に Rust + egui へ移行） |
 | 既存アプリとの関係 | **`lol-coach` とは別アプリ**として独立して開発する（F-14 のTTSは必要ならコードを移植） |

@@ -1,7 +1,8 @@
-//! lol-lane-priority のロジック層。Python 版 `app/` と同じ計算結果になることを目標にした移植。
+//! lol-lane-priority のロジック層（画面以外のすべて）。
 pub mod analyzer;
 pub mod config;
 pub mod champions;
+pub mod collect;
 pub mod matchup_db;
 pub mod models;
 pub mod role_inference;
