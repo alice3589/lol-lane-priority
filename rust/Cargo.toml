@@ -1,0 +1,23 @@
+[package]
+name = "lane-core"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.90"
+description = "lol-lane-priority のロジック層（Python版 app/ の移植）"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.32", features = ["bundled"] }
+ureq = { version = "3", features = ["json"] }
+base64 = "0.22"
+eframe = "0.33"
+
+[[bin]]
+name = "lane-priority"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true

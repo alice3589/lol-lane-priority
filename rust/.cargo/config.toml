@@ -1,0 +1,6 @@
+[resolver]
+incompatible-rust-versions = "fallback"
+
+# 配布先に Visual C++ ランタイムが無くても動くよう、C ランタイムを exe に静的リンクする
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]
